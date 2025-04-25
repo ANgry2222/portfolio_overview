@@ -1,0 +1,33 @@
+.asset_container {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	height: 35px;
+	align-items: center;
+	border-radius: 15px;
+	font-size: 20px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgb(241, 241, 241);
+	}
+}
+
+.asset_container__currency_name {
+	grid-column: 1;
+}
+
+.asset_container__currency_count {
+	grid-column: 2;
+}
+.asset_container__actual_price {
+	grid-column: 3;
+}
+
+.asset_container__total_cost {
+	grid-column: 4;
+}
+
+.asset_container__portfolio_share {
+	grid-column: 6;
+}

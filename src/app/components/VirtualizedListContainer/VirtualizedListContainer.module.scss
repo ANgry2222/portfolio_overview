@@ -1,0 +1,43 @@
+.modal_form__currencies_list {
+	height: 200px;
+	overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		width: 7px; /* Ширина скроллбара */
+	}
+
+	&::-webkit-scrollbar-track {
+		background: white; /* Цвет фона трека */
+		border-radius: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba($color: #ff5757, $alpha: 0.7); /* Цвет ползунка */
+		border-radius: 10px;
+		pointer-events: none;
+
+		&:hover {
+			background: rgba(
+				$color: #ff5757,
+				$alpha: 0.9
+			); /* Цвет ползунка при наведении */
+			pointer-events: none;
+		}
+	}
+}
+
+.input_field {
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
+	border: none;
+	border-bottom: 2px solid black;
+	padding-left: 8px;
+	margin: 10px 0;
+
+	&:focus {
+		border: none;
+		border-bottom: 2px solid black;
+		outline: none;
+	}
+}

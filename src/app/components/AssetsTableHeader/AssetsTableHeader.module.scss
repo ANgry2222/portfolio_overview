@@ -1,0 +1,31 @@
+.assets_table__header_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	align-items: center;
+	height: 50px;
+	border: 2px solid black;
+	font-size: 22px;
+}
+
+.header_container__currency_name {
+	grid-column: 1;
+}
+
+.header_container__currency_count {
+	grid-column: 2;
+}
+.header_container__actual_price {
+	grid-column: 3;
+}
+
+.header_container__total_cost {
+	grid-column: 4;
+}
+
+.header_container__daily_change {
+	grid-column: 5;
+}
+
+.header_container__portfolio_share {
+	grid-column: 6;
+}

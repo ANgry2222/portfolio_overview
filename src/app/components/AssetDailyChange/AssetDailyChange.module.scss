@@ -1,0 +1,12 @@
+.asset_container__daily_change {
+	grid-column: 5;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.daily_change_text {
+	line-height: 100%;
+}

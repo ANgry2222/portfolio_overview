@@ -1,0 +1,25 @@
+.loading_indicator__wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.indicator_text {
+	font-size: 28px;
+}
+
+.indicator_spinner {
+	margin-top: 15px;
+	border: 6px solid rgba(0, 0, 0, 0.1);
+	border-left-color: #ff5757;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

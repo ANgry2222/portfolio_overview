@@ -1,0 +1,13 @@
+.header_button {
+	padding: 10px 25px;
+	font-size: 20px;
+	border-radius: 24px;
+	color: white;
+	background-color: rgba(255, 87, 87, 1);
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba(215, 85, 85, 1);
+	}
+}

@@ -1,0 +1,8 @@
+.assets_table__container {
+	margin-left: 200px;
+	margin-right: 200px;
+	text-align: center;
+	height: calc(100vh - 84px);
+	display: grid;
+	grid-template-rows: auto 1fr;
+}

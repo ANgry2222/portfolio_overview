@@ -1,0 +1,27 @@
+.short_asset__container {
+	display: grid;
+	grid-template-columns: auto 2fr auto;
+	height: 40px;
+	align-items: center;
+	text-align: center;
+	border-radius: 18px;
+	padding: 0 10px;
+	user-select: none;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgb(241, 241, 241);
+	}
+}
+
+.short_asset__name {
+	grid-column: 1;
+}
+
+.short_asset__price {
+	grid-column: 2;
+}
+
+.short_asset__price_change {
+	grid-column: 3;
+}
