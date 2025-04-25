@@ -1,4 +1,4 @@
-import { CurrenciesContext } from "@/app/page";
+import CurrenciesContext from "@/app/utils/context";
 import { JSX, useContext, useEffect, useRef, useState } from "react";
 import ShortAsset, { IShortAssetProps } from "../ShortAsset/ShortAsset";
 import styles from "./VirtualizedListContainer.module.scss";

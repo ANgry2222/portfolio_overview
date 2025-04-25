@@ -3,14 +3,13 @@
 import { AssetsTable } from "./components/AssetsTable/AssetsTable";
 import { PortfolioHeader } from "./components/PortfolioHeader/PortfolioHeader";
 import { Modal } from "./components/Modal/Modal";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { IShortAssetProps } from "./components/ShortAsset/ShortAsset";
 import { ws as websocket } from "./utils/websocket";
 import LoadingIndicator from "./components/LoadingIndicator/LoadingIndicator";
 import styles from "./page.module.scss";
-
-export const CurrenciesContext = createContext<IShortAssetProps[]>([]);
+import CurrenciesContext from "./utils/context";
 
 export default function Home() {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
