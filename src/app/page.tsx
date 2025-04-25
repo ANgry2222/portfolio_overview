@@ -26,10 +26,10 @@ export default function Home() {
 		axios
 			.get("https://data-api.binance.vision/api/v3/ticker/24hr")
 			.then((response) => {
-				const filteredResponse = response.data.filter((item) =>
+				const filteredResponse = response.data.filter((item: any) =>
 					item.symbol.endsWith("USDT")
 				);
-				const assetsData = filteredResponse.map((item) => ({
+				const assetsData = filteredResponse.map((item: any) => ({
 					currencySymbol: item.symbol,
 					currencyName: item.symbol.slice(0, -4),
 					currencyPrice: `${parseFloat(item.lastPrice).toFixed(5)}`,
