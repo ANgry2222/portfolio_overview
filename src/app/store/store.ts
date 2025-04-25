@@ -1,4 +1,4 @@
-import { combineReducers, configureStore, Reducer } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import modalReducer from "./slices/modalSlice";
 import dataLoadReducer from "./slices/dataLoadSlice";
 import currentAssetReducer from "./slices/currentAssetSlice";
@@ -14,7 +14,7 @@ const loadState = () => {
 		}
 		return JSON.parse(serializedState);
 	} catch (err) {
-		("");
+		console.log(err);
 	}
 };
 

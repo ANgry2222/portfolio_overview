@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch, useAppSelector } from "@/app/hooks/ReduxHooks";
-import { KeyboardEvent, useEffect, useRef } from "react";
+import { KeyboardEvent, MouseEvent, useEffect, useRef } from "react";
 import { closeModal } from "@/app/store/slices/modalSlice";
 import { createPortal } from "react-dom";
 import ModalForm from "../ModalForm/ModalForm";
@@ -48,7 +48,7 @@ export const Modal = () => {
 					className={styles.open_dialog}
 				>
 					<div
-						onClick={(event: any) => modalClickEvent(event)}
+						onClick={(event: MouseEvent) => modalClickEvent(event)}
 						className={styles.modal_wrapper}
 					>
 						<ModalForm />

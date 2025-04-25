@@ -1,8 +1,6 @@
-import getColorByValue from "@/app/utils/getColorByValue";
 import styles from "./Asset.module.scss";
 import { useAppDispatch } from "@/app/hooks/ReduxHooks";
 import { deleteAsset } from "@/app/store/slices/portfolioSlice";
-import Triangle from "../svg/Triangle";
 import AssetDailyChange from "../AssetDailyChange/AssetDailyChange";
 
 export interface IAssetProps {

@@ -1,5 +1,4 @@
 import { io } from "socket.io-client";
-import { useAppSelector } from "../hooks/ReduxHooks";
 import store from "../store/store";
 
 const assetsList = store.getState().portfolio.items;

@@ -12,38 +12,38 @@ export const VirtualizedListContainer = () => {
 	const [components, setComponents] = useState<JSX.Element[]>([]);
 	const containerRef = useRef<HTMLDivElement>(null);
 
-	const addComponents = (length: number) => {
-		let createdComponents: JSX.Element[] = [];
-		filteredData
-			.slice(components.length, length)
-			.map((item) =>
-				createdComponents.push(
-					<ShortAsset key={item.currencySymbol} {...item} />
-				)
-			);
-		setComponents((prev) => [...prev, ...createdComponents]);
-	};
-
 	useEffect(() => {
+		const addComponents = (length: number) => {
+			const createdComponents: JSX.Element[] = [];
+			filteredData
+				.slice(components.length, length)
+				.map((item) =>
+					createdComponents.push(
+						<ShortAsset key={item.currencySymbol} {...item} />
+					)
+				);
+			setComponents((prev) => [...prev, ...createdComponents]);
+		};
+
 		addComponents(renderedItems);
-	}, [renderedItems]);
+	}, [renderedItems, filteredData, components.length]);
 
 	useEffect(() => {
 		setFilteredData(data);
 		setRenderedItems(20);
-	}, []);
+	}, [, data]);
 
 	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		containerRef.current?.scrollTo(0, 0);
 		setComponents([]);
 		const { value } = event.target;
 		const searchText = value.toUpperCase();
-		let searchData = data.filter((item) =>
+		const searchData = data.filter((item) =>
 			item.currencyName.includes(searchText)
 		);
 
 		if (searchData.length === 0) {
-			setComponents([<EmptyListPlaceholder />]);
+			setComponents([<EmptyListPlaceholder key={1} />]);
 		}
 
 		if (searchText.length !== 0) {

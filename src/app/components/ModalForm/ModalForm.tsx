@@ -65,10 +65,8 @@ export const ModalForm = () => {
 						<div className={styles.modal_form__buttons_div}>
 							<ColoredButton
 								color="#29e729"
-								onClick={() => {
-									handleSubmit;
-								}}
 								text="Add"
+								onClick={() => {}}
 							/>
 							<ColoredButton
 								onClick={() => {
