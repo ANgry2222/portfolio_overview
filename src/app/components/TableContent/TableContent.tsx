@@ -9,7 +9,7 @@ export const TableContent = () => {
 		return (
 			<div className={styles.table_content__placeholder}>
 				<p>Портфель не содержит активов</p>
-				<p>нажмите кнопку &quote;Добавить&quote;</p>
+				<p>нажмите кнопку &#34;Добавить&#34;</p>
 				<p>чтобы начать заполнять портфель активами</p>
 			</div>
 		);
