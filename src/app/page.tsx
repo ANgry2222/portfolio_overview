@@ -27,8 +27,6 @@ export default function Home() {
 		}, 5000);
 	}, []);
 	useEffect(() => {
-		//sendRequest();
-
 		axios
 			.get("https://data-api.binance.vision/api/v3/ticker/24hr")
 			.then((response) => {

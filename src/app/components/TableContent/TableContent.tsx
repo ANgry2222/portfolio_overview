@@ -8,9 +8,9 @@ export const TableContent = () => {
 	if (portfolio.length === 0) {
 		return (
 			<div className={styles.table_content__placeholder}>
-				<p>No assets are added</p>
-				<p>use Add asset button</p>
-				<p>to start filling your portfolio</p>
+				<p>Портфель не содержит активов</p>
+				<p>нажмите кнопку "Добавить"</p>
+				<p>чтобы начать заполнять портфель активами</p>
 			</div>
 		);
 	} else {
