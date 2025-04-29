@@ -8,7 +8,7 @@ export const PortfolioHeader = () => {
 	const dispatch = useAppDispatch();
 	return (
 		<header className={styles.portfolio_header__container}>
-			<p className={styles.header_logo}>
+			<div className={styles.header_logo}>
 				Portf<span className={styles.span_placeholder}>o</span>
 				<span className={styles.span_1}>
 					<Triangle width={10} height={10} color={"#24cf24"} />
@@ -25,9 +25,9 @@ export const PortfolioHeader = () => {
 					o
 				</span>
 				&nbsp;Overview
-			</p>
+			</div>
 			<ColoredButton
-				text="Add asset"
+				text="Добавить"
 				onClick={() => {
 					dispatch(openModal());
 				}}
