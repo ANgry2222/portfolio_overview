@@ -1,13 +1,15 @@
 .short_asset__container {
 	display: grid;
-	grid-template-columns: auto 2fr auto;
+	grid-template-columns: 1fr 1fr auto 1fr 1fr;
 	height: 40px;
+	width: 100%;
 	align-items: center;
 	text-align: center;
 	border-radius: 18px;
 	padding: 0 10px;
 	user-select: none;
 	cursor: pointer;
+	position: absolute;
 
 	&:hover {
 		background-color: rgb(241, 241, 241);
@@ -16,12 +18,14 @@
 
 .short_asset__name {
 	grid-column: 1;
+	text-align: left;
 }
 
 .short_asset__price {
-	grid-column: 2;
+	grid-column: 3;
 }
 
 .short_asset__price_change {
-	grid-column: 3;
+	text-align: right;
+	grid-column: 5;
 }

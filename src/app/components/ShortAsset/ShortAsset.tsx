@@ -8,6 +8,7 @@ export interface IShortAssetProps {
 	currencyName: string;
 	currencyPrice: number;
 	currencyPriceChange: number;
+	topOffset: number;
 }
 
 export const ShortAsset = (props: IShortAssetProps) => {
@@ -21,15 +22,14 @@ export const ShortAsset = (props: IShortAssetProps) => {
 		<div
 			className={styles.short_asset__container}
 			onClick={hadleAssetClick}
-		>
+			style={{ top: `${props.topOffset}px` }}>
 			<p className={styles.short_asset__name}>{props.currencyName}</p>
 			<p className={styles.short_asset__price}>${props.currencyPrice}</p>
 			<p
 				className={styles.short_asset__price_change}
 				style={{
 					color: getColorByValue(props.currencyPriceChange),
-				}}
-			>
+				}}>
 				{props.currencyPriceChange}%
 			</p>
 		</div>

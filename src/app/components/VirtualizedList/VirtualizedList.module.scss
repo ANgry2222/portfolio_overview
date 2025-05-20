@@ -1,7 +1,7 @@
 .modal_form__currencies_list {
 	height: 200px;
 	overflow-y: scroll;
-
+	position: relative;
 	&::-webkit-scrollbar {
 		width: 7px; /* Ширина скроллбара */
 	}

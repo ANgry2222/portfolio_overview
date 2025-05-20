@@ -5,8 +5,8 @@ import { clearCurrentAsset } from "@/app/store/slices/currentAssetSlice";
 import { closeModal } from "@/app/store/slices/modalSlice";
 import { addAsset } from "@/app/store/slices/portfolioSlice";
 import { IAssetProps } from "../Asset/Asset";
-import { VirtualizedListContainer } from "../VirtualizedListContainer/VirtualizedListContainer";
 import ColoredButton from "../ColoredButton/ColoredButton";
+import VirtualizedList from "../VirtualizedList/VirtualizedList";
 
 export const ModalForm = () => {
 	const dispatch = useAppDispatch();
@@ -42,7 +42,7 @@ export const ModalForm = () => {
 	return (
 		<div className={styles.modal_form__container}>
 			<form onSubmit={(event) => handleSubmit(event)}>
-				<VirtualizedListContainer />
+				<VirtualizedList />
 				{currentAsset ? (
 					<div>
 						<div className={styles.current_asset__container}>
@@ -65,14 +65,14 @@ export const ModalForm = () => {
 						<div className={styles.modal_form__buttons_div}>
 							<ColoredButton
 								color="#29e729"
-								text="Add"
+								text="Добавить"
 								onClick={() => {}}
 							/>
 							<ColoredButton
 								onClick={() => {
 									dispatch(clearCurrentAsset());
 								}}
-								text="Cancel"
+								text="Отмена"
 							/>
 						</div>
 					</div>
